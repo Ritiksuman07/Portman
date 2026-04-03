@@ -25,16 +25,14 @@ jobs:
         with:
           go-version-file: go.mod
 
-      - name: Install ffmpeg
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Setup FFmpeg
+        uses: AnimMouse/setup-ffmpeg@v1
 
       - name: Build portman
         run: go build ./...
 
-      - name: Generate demo GIF
-        uses: charmbracelet/vhs-action@v2
-        with:
-          path: scripts/demo.tape
+      - name: Generate demo GIF (VHS Docker)
+        run: docker run --rm -v "${{ github.workspace }}:/vhs" ghcr.io/charmbracelet/vhs scripts/demo.tape
 
       - name: Extract demo screenshot
         run: |
