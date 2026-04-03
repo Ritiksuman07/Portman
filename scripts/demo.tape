@@ -18,7 +18,7 @@ Enter
 
 Type "go run ."
 Enter
-Sleep 2s
+Sleep 3s
 Type "/"
 Type "go"
 Sleep 1s
