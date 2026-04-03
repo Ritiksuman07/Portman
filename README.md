@@ -6,6 +6,8 @@ portman is a terminal-native process and port manager for developers who live in
 
 ![portman screenshot](assets/portman-screenshot.png)
 
+![portman demo](assets/portman-demo.gif)
+
 ## Why portman
 
 - **Real-time port visibility**: See every listening service with its PID, status, and resource usage.
