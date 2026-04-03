@@ -2,6 +2,8 @@
 
 ![Demo](assets/demo.gif)
 
+![Screenshot](assets/demo.png)
+
 Local port and process manager for developers. A fast, keyboard-driven TUI that shows what is running, where it is listening, and lets you act on it.
 
 ## Install

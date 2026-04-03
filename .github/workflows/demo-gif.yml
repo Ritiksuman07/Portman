@@ -15,6 +15,8 @@ permissions:
 jobs:
   vhs:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
     steps:
       - uses: actions/checkout@v4
 
@@ -23,21 +25,30 @@ jobs:
         with:
           go-version-file: go.mod
 
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
       - name: Build portman
         run: go build ./...
 
       - name: Generate demo GIF
         uses: charmbracelet/vhs-action@v2
         with:
-          tape: scripts/demo.tape
+          path: scripts/demo.tape
+
+      - name: Extract demo screenshot
+        run: |
+          if [ -f assets/demo.gif ]; then
+            ffmpeg -y -i assets/demo.gif -vf "select=eq(n\\,20)" -vframes 1 assets/demo.png
+          fi
 
       - name: Commit demo GIF
         run: |
-          if git status --porcelain | grep -q "assets/demo.gif"; then
+          if git status --porcelain | grep -q "assets/demo.gif\|assets/demo.png"; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add assets/demo.gif
-            git commit -m "Update demo GIF"
+            git add assets/demo.gif assets/demo.png
+            git commit -m "Update demo media"
             git push
           else
             echo "No demo gif changes"
