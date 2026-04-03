@@ -2,7 +2,7 @@
 
 Welcome to the portman documentation hub.
 
-## Quick Links
+## Sections
 
 - Getting Started
 - Usage
