@@ -23,8 +23,8 @@ archives:
 brews:
   - name: portman
     tap:
-      owner: ritiksuman007
+      owner: ritiksuman07
       name: homebrew-tap
-    homepage: "https://github.com/ritiksuman07/portman"
+    homepage: "https://github.com/Ritiksuman07/Portman"
     description: "Local port and process manager for developers"
     license: "MIT"

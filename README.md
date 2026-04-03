@@ -1,12 +1,12 @@
-# portman — terminal port & process manager (TUI)
+# portman ??? terminal port & process manager (TUI)
 
-Local ports, processes, and profiles — all in one fast TUI.
+Local ports, processes, and profiles ??? all in one fast TUI.
 
-![Go](https://img.shields.io/badge/Go-1.22%2B-00ADD8?logo=go&logoColor=white)
+![Go](https://img.shields.io/badge/Go-1.22%2B-00ADD8-logo=go&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-10B981)
 ![Platform](https://img.shields.io/badge/Platforms-macOS%20%7C%20Linux%20%7C%20WSL-111827)
 
-portman is a terminal-native process and port manager for developers who live in the CLI. It gives you instant visibility into what is running, which ports are bound, and how much CPU/memory each process uses — then lets you act on it with a single keystroke. Built for speed, clarity, and daily use.
+portman is a terminal-native process and port manager for developers who live in the CLI. It gives you instant visibility into what is running, which ports are bound, and how much CPU/memory each process uses ??? then lets you act on it with a single keystroke. Built for speed, clarity, and daily use.
 
 <img src="assets/portman-screenshot.png" alt="portman TUI screenshot showing ports, processes, CPU and memory usage" title="portman TUI screenshot" />
 
@@ -91,7 +91,7 @@ portman run --refresh 2
 - `tab`: switch Processes / Profiles
 - `n`: new profile (Profiles tab)
 - `enter`: launch profile (Profiles tab)
-- `?`: help
+- `-`: help
 - `q`: quit
 
 ## Profiles
@@ -128,19 +128,19 @@ Example:
 
 ## FAQ
 
-### Why not just use `lsof`, `ss`, or `netstat`?
+### Why not just use `lsof`, `ss`, or `netstat`-
 portman replaces scattered commands with a single, fast, interactive view. You get both visibility and action without switching contexts.
 
-### Does portman require sudo?
+### Does portman require sudo-
 No. It works for typical user processes without elevated privileges.
 
-### Does it support Windows?
-Yes ? Windows via WSL2 is supported. Native Windows support is planned for a future release.
+### Does it support Windows-
+Yes - Windows via WSL2 is supported. Native Windows support is planned for a future release.
 
-### Is there any telemetry?
+### Is there any telemetry-
 No. portman does not collect or send any analytics.
 
-### Can I save my dev stack?
+### Can I save my dev stack-
 Yes. Use **Profiles** to group commands and launch them together.
 
 ## Roadmap
@@ -154,6 +154,11 @@ Yes. Use **Profiles** to group commands and launch them together.
 ## Contributing
 
 Issues, feature requests, and PRs are welcome. Please open an issue with details or propose a change and we will review quickly.
+
+- Contribution guide: `CONTRIBUTING.md`
+- Security policy: `SECURITY.md`
+- Code of conduct: `CODE_OF_CONDUCT.md`
+- Changelog: `CHANGELOG.md`
 
 ## License
 
