@@ -1,12 +1,32 @@
-# portman
+# portman — terminal port & process manager (TUI)
 
-Local ports, processes, and profiles ? all in one fast TUI.
+Local ports, processes, and profiles — all in one fast TUI.
 
-portman is a terminal-native process and port manager for developers who live in the CLI. It gives you instant visibility into what is running, which ports are bound, and how much CPU/memory each process uses ? then lets you act on it with a single keystroke. Built for speed, clarity, and daily use.
+![Go](https://img.shields.io/badge/Go-1.22%2B-00ADD8?logo=go&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-10B981)
+![Platform](https://img.shields.io/badge/Platforms-macOS%20%7C%20Linux%20%7C%20WSL-111827)
 
-![portman screenshot](assets/portman-screenshot.png)
+portman is a terminal-native process and port manager for developers who live in the CLI. It gives you instant visibility into what is running, which ports are bound, and how much CPU/memory each process uses — then lets you act on it with a single keystroke. Built for speed, clarity, and daily use.
 
-![portman demo](assets/portman-demo.gif)
+<img src="assets/portman-screenshot.png" alt="portman TUI screenshot showing ports, processes, CPU and memory usage" title="portman TUI screenshot" />
+
+<img src="assets/portman-demo.gif" alt="portman demo GIF showing filtering, details, and kill actions" title="portman demo GIF" />
+
+## Table of Contents
+
+- Why portman
+- Features
+- Install
+- Usage
+- Profiles
+- FAQ
+- Roadmap
+- Contributing
+- License
+
+## Keywords
+
+terminal process manager, port manager, TUI, CLI tool, developer productivity, kill process, restart process, local dev stack, port scanner, process monitor, Go TUI, Bubbletea, Lipgloss, gopsutil
 
 ## Why portman
 
