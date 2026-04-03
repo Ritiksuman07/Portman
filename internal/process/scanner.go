@@ -5,6 +5,7 @@ import (
     "errors"
     "sort"
     "strings"
+    "syscall"
     "time"
 
     "github.com/shirou/gopsutil/v3/net"
@@ -119,12 +120,20 @@ func ScanOnce() ([]Entry, error) {
             procCache[c.Pid] = pinfo
         }
 
+        protocol := "UNKNOWN"
+        switch c.Type {
+        case syscall.SOCK_STREAM:
+            protocol = "TCP"
+        case syscall.SOCK_DGRAM:
+            protocol = "UDP"
+        }
+
         entries = append(entries, Entry{
             PID:        c.Pid,
             Name:       pinfo.name,
             Cmdline:    pinfo.cmdline,
             Port:       c.Laddr.Port,
-            Protocol:   strings.ToUpper(c.Type),
+            Protocol:   protocol,
             Status:     strings.ToUpper(c.Status),
             CPUPercent: pinfo.cpu,
             MemRSS:     pinfo.mem,

@@ -101,15 +101,15 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
             m.help.ShowAll = !m.help.ShowAll
         case key.Matches(msg, m.keys.Up):
             if m.tabActive() == tabProcesses {
-                m.processTable.CursorUp()
+                m.processTable.MoveUp(1)
             } else {
-                m.profileTable.CursorUp()
+                m.profileTable.MoveUp(1)
             }
         case key.Matches(msg, m.keys.Down):
             if m.tabActive() == tabProcesses {
-                m.processTable.CursorDown()
+                m.processTable.MoveDown(1)
             } else {
-                m.profileTable.CursorDown()
+                m.profileTable.MoveDown(1)
             }
         case key.Matches(msg, m.keys.Top):
             if m.tabActive() == tabProcesses {
@@ -299,7 +299,7 @@ func (m model) updateWizard(msg tea.KeyMsg) (tea.Model, tea.Cmd) {
             _ = profiles.Save(m.profiles)
             m.setProfileRows()
             m.wizard = profileWizard{active: false, stage: wizName, input: m.wizard.input}
-            return m, profileSavedMsg{}
+            return m, func() tea.Msg { return profileSavedMsg{} }
         }
 
         m.wizard.input.SetValue("")
