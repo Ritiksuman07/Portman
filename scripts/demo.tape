@@ -6,6 +6,14 @@ Set Width 1200
 Set Height 720
 Set Framerate 30
 
+Type "clear"
+Enter
+Type "printf \"\\n\\n   portman — local port & process manager\\n\""
+Enter
+Sleep 1s
+Type "clear"
+Enter
+
 Type "go run ."
 Enter
 Sleep 2s
