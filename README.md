@@ -4,6 +4,8 @@ Local ports, processes, and profiles ? all in one fast TUI.
 
 portman is a terminal-native process and port manager for developers who live in the CLI. It gives you instant visibility into what is running, which ports are bound, and how much CPU/memory each process uses ? then lets you act on it with a single keystroke. Built for speed, clarity, and daily use.
 
+![portman screenshot](assets/portman-screenshot.png)
+
 ## Why portman
 
 - **Real-time port visibility**: See every listening service with its PID, status, and resource usage.
