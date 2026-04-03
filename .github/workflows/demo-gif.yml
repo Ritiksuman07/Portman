@@ -37,7 +37,7 @@ jobs:
       - name: Extract demo screenshot
         run: |
           if [ -f assets/demo.gif ]; then
-            ffmpeg -y -i assets/demo.gif -vf "select=eq(n\\,120)" -vframes 1 assets/demo.png
+            ffmpeg -y -ss 6 -i assets/demo.gif -vframes 1 assets/demo.png
           fi
 
       - name: Commit demo GIF

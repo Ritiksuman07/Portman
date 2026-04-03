@@ -8,13 +8,7 @@ Set Framerate 30
 
 Type "clear"
 Enter
-Type "echo"
-Enter
-Type "echo   portman - local port and process manager"
-Enter
-Sleep 1s
-Type "clear"
-Enter
+Sleep 500ms
 
 Type "go run ."
 Enter
