@@ -15,4 +15,8 @@ Sleep 1s
 Escape
 Type "d"
 Sleep 1s
+Type "x"
+Sleep 500ms
+Type "n"
+Sleep 500ms
 Type "q"
