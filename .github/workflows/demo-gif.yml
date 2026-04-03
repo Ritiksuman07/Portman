@@ -1,53 +1,10 @@
-name: Demo GIF
+name: Demo Media Disabled
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - scripts/demo.tape
-      - internal/**
-      - cmd/**
-      - main.go
-
-permissions:
-  contents: write
 
 jobs:
-  vhs:
+  noop:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Go
-        uses: actions/setup-go@v5
-        with:
-          go-version-file: go.mod
-
-      - name: Setup FFmpeg
-        uses: AnimMouse/setup-ffmpeg@v1
-
-      - name: Build portman
-        run: go build ./...
-
-      - name: Generate demo GIF (VHS Docker)
-        run: docker run --rm -v "${{ github.workspace }}:/vhs" ghcr.io/charmbracelet/vhs scripts/demo.tape
-
-      - name: Extract demo screenshot
-        run: |
-          if [ -f assets/demo.gif ]; then
-            ffmpeg -y -ss 6 -i assets/demo.gif -vframes 1 assets/demo.png
-          fi
-
-      - name: Commit demo GIF
-        run: |
-          if git status --porcelain | grep -q "assets/demo.gif\|assets/demo.png"; then
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add assets/demo.gif assets/demo.png
-            git commit -m "Update demo media"
-            git push
-          else
-            echo "No demo gif changes"
-          fi
+      - run: echo "Demo media workflow disabled."
