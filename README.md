@@ -11,7 +11,7 @@ brew install ritiksuman007/tap/portman
 ```
 
 ```bash
-go install github.com/ritiksuman007/portman@latest
+go install github.com/ritiksuman07/portman@latest
 ```
 
 ## Run

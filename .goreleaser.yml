@@ -25,6 +25,6 @@ brews:
     tap:
       owner: ritiksuman007
       name: homebrew-tap
-    homepage: "https://github.com/ritiksuman007/portman"
+    homepage: "https://github.com/ritiksuman07/portman"
     description: "Local port and process manager for developers"
     license: "MIT"

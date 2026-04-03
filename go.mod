@@ -1,4 +1,4 @@
-module github.com/ritiksuman007/portman
+module github.com/ritiksuman07/portman
 
 go 1.23.0
 

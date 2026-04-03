@@ -4,7 +4,7 @@ import (
     "context"
     "time"
 
-    "github.com/ritiksuman007/portman/internal/tui"
+    "github.com/ritiksuman07/portman/internal/tui"
     "github.com/spf13/cobra"
 )
 

@@ -8,7 +8,7 @@ Set Framerate 30
 
 Type "clear"
 Enter
-Type "printf \"\\n\\n   portman — local port & process manager\\n\""
+Type "printf \"\\n\\n   portman ??? local port & process manager\\n\""
 Enter
 Sleep 1s
 Type "clear"
