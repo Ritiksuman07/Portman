@@ -5,3 +5,9 @@
 .DS_Store
 .idea/
 .vscode/
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+runs/
+quantflow.duckdb
